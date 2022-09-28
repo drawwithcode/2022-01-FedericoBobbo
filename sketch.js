@@ -1,11 +1,11 @@
 function setup() {
   createCanvas(windowWidth, windowHeight);
   rectMode(CENTER);
-  angleMode(DEGREES)
+  angleMode(DEGREES);
 }
 
 function draw() {
-//Metto il framerate casuale in un intervallo di tempo scelto da me, affinchè sia il caso a decidere la vita di ogni quadro 
+//Metto il framerate casuale in un intervallo di tempo scelto da me, affinchè sia il caso a decidere la vita di ogni quadro
   let fr = random(0.1,1);
   frameRate(fr);
   console.log(fr);
@@ -25,7 +25,7 @@ function draw() {
   var colori = ["#d7b132","#d7b132","#dc9830","#dc9830","#cd522e","#cd522e","#227d42","#1c1e4f","#1a1a1a","#1a1a1a","#dfabb9"];
   background(mywhite);
 
-// Creo degli array per larghezza e altezza utilizzando misure modulari come nel quadro originale, ripeto i valori affinchè si presentino piu volte.
+// Creo degli array per larghezza e altezza utilizzando misure modulari come nel quadro originale, ripeto i valori che voglio piu presenti.
   var h = [10,10,10,10,20,20,20,20,20,20,40,40,40,60,60,80,100];
   var w = [40,40,40,40,40,40,80,80,80,80,120,120,160,200,240,300,400];
   var q = [100,120,160,200];
@@ -49,7 +49,7 @@ function draw() {
   for(let i=0; i < amount2; i++){
     push()
     fill(random(colori));
-    rotate(random(rotation))
+    rotate(random(rotation));
     square(random(-windowWidth/2,windowWidth/2),random(-windowHeight/2,windowHeight/2),random(q));
     pop()
   }
